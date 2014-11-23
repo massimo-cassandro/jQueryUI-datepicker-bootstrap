@@ -1,0 +1,113 @@
+/*! Bootstrap 3 theme for jQuery UI Datepicker
+ * Massimo Cassandro 2014
+ *
+ */
+
+@import (less) 'path/to/jQueryUI/themes/base/core.css';
+@import (less) 'path/to/jQueryUI//themes/base/datepicker.css';
+@import (reference) 'path/to/Boostrap/less/variables.less';
+//@icon-font-path: 'path/to/Boostrap/fonts/'; // better to be set in your Bootstrap project file
+@import (reference) 'path/to/Boostrap/less/glyphicons.less';
+
+.ui-datepicker {
+    border: 1px solid @panel-default-border;
+    background-color: #fff;
+    border-radius: @border-radius-base;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.75);
+}
+.ui-datepicker .ui-datepicker-header {
+    background-color: @panel-default-heading-bg;
+    border-radius: @border-radius-base;
+    font-family:@font-family-sans-serif;
+    color: @panel-default-text;
+    font-weight: bold;
+}
+.ui-datepicker .ui-datepicker-next,
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next-hover,
+.ui-datepicker .ui-datepicker-prev-hover {
+    background-color: transparent;
+    color: @state-info-text;
+    cursor: pointer;
+    border-radius: @border-radius-base;
+    top:3px;
+    &:hover {
+        background-color: @state-info-text;
+        color: @state-info-bg;
+    }
+}
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span {
+    top: 25%;
+    font-size:120%;
+    line-height: 1.5;
+}
+.ui-datepicker .ui-datepicker-prev {
+    left:3px;
+    & span {
+        left:45%;
+    }
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right:3px;
+    & span {
+        left:40%;
+    }
+}
+.ui-datepicker .ui-icon {
+    .glyphicon();
+    visibility: hidden;
+    text-indent: 0;
+    &:before {
+       visibility: visible;
+    }
+}
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-w {
+    .glyphicon-chevron-left();
+}
+.ui-datepicker .ui-icon.ui-icon-circle-triangle-e {
+    .glyphicon-chevron-right();
+}
+
+.ui-datepicker table {
+    border-collapse: separate;
+}
+
+.ui-datepicker th, .ui-datepicker td {
+    font-family:@font-family-sans-serif;
+
+}
+.ui-datepicker th {
+    color:@gray;
+
+}
+.ui-datepicker td.ui-datepicker-unselectable span {
+    color:@gray-light;
+    background-color: transparent;
+}
+
+.ui-datepicker td a {
+    background-color: @panel-default-heading-bg;
+    color:@text-color;
+    //font-weight: bold;
+    text-decoration: none;
+    border:1px solid @gray-lighter;
+    border-radius:@border-radius-small;
+
+    &:hover {
+        background-color: @link-hover-color;
+        color:#fff;
+    }
+    &:active {
+        background-color: @link-hover-color;
+    }
+}
+.ui-datepicker .ui-datepicker-current-day a {
+    background-color: @state-info-bg;
+    color:@state-info-text;
+}
+.ui-datepicker .ui-datepicker-today a {
+    //border-width:2px;
+    border-color:@gray;
+}
